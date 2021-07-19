@@ -12,7 +12,7 @@ pipeline {
     }
     stage ('Deploy') {
             steps{
-              deploy adapters: [tomcat9(credentialsId: 'd1cf148a-5f2e-4d3d-8cdb-b5bae39d0ab8', path: '', url: 'http://localhost:8090/')], contextPath: 'helloworld', war: '**/*.war'
+              deploy adapters: [tomcat9(credentialsId: 'd1cf148a-5f2e-4d3d-8cdb-b5bae39d0ab8', path: '', url: 'http://localhost:8090/')], contextPath: 'login', war: '**/*.war'
               echo "Deploy successful";
             }
         }
